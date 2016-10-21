@@ -1,0 +1,49 @@
+==========PC=============
+
+GUI
+
+- ³¹czenie z raspberry
+	sprawdŸ IP i port, kliknij "po³¹cz"
+
+- wysy³anie rozkazów do silników
+	klawisze W, S, A, D
+
+- robienie zdjêæ
+	kliknij "zdjêcie"
+	zdjêcie o wymiarach 720x480 zapisuje siê jako "image<liczba_plikow - 1>.jpg"
+	ostatnie zdjêcie wyœwietla siê w oknie interfejsu
+
+
+SKRYPT
+
+- podzia³ na klasy
+- po³¹czenie przez socket
+- mo¿na wpisaæ aktualne IP w polu klasy "MainWindow(QMainWindow)"
+- automatyczne odœwie¿anie zdjêcia za pomoc¹ metody signal/slot
+
+
+
+
+=========RASPBERRY==========
+
+SKRYPT
+
+- podzia³ na klasy
+- po³¹czenie przez socket
+- NALE¯Y wpisaæ aktualne IP w polu klasy "SocketConnection"
+
+
+
+
+============KOMUNIKACJA============
+
+- w¹tki odbioru dzia³aj¹ce bez przerwy
+- odbiór rozkazu wychodz¹cego z PC jest potwierdzany komunikatem "ack", a wykonanie komunikatem "done"
+- nie mo¿na wysy³aæ kolejnych rozkazów bez obu potwierdzeñ
+- przesy³anie zdjêcia jest zakoñczone ci¹giem "end"
+
+
+
+
+
+
