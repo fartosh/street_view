@@ -6,6 +6,7 @@ import os, os.path
 import threading
 import socket
 
+
 class Camera:
     url = 'images/'
     sleep_time = 3
@@ -31,7 +32,7 @@ class Camera:
 
 
 class SocketConnection:
-    #host = '169.254.164.187'
+    # host = '169.254.164.187'
     host = '192.168.137.87'
     port = 51716
 
@@ -60,8 +61,24 @@ class SocketConnection:
             Main.camera.image_capture(1)
             self.send_image(Camera.url+'image%s.jpg' %(len(os.listdir(Camera.url))-1))
             return True
-        else:
-            return Main.uart.send(order)
+        elif order == "w":
+            Main.uart.send("1")
+            return True
+        elif order == "s":
+            Main.uart.send("2")
+            return True
+        elif order == "a":
+            Main.uart.send("3")
+            return True
+        elif order == "d":
+            Main.uart.send("4")
+            return True
+        elif order == "q":
+            Main.uart.send("5")
+            return True
+        elif order == "e":
+            Main.uart.send("6")
+            return True
 
     def send_image(self, url):
         img = open(url, 'rb')
@@ -87,14 +104,15 @@ class UartConnection:
             self.data = self.serial_port.read(self.serial_port.inWaiting())
             if len(self.data) > 0:
                 print "data from arduino:", self.data
-            #Main.connection.socket.sendall(self.data)
+            # Main.connection.socket.sendall(self.data)
     
     def send(self, data):
         print "sending to arduino:", data
         self.serial_port.write(data)
         return True
         # ZROBIC RETURN CZY SIE UDALO
-    
+
+
 class Main:
     def __init__(self):
         Main.uart = UartConnection()

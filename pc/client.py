@@ -43,6 +43,10 @@ class MainWindow(QMainWindow):
             self.leftLabel.setPalette(self.palette_red)
         if key == QtCore.Qt.Key_D:
             self.rightLabel.setPalette(self.palette_red)
+        if key == QtCore.Qt.Key_Q:
+            self.cameraLeftLabel.setPalette(self.palette_red)
+        if key == QtCore.Qt.Key_E:
+            self.cameraRightLabel.setPalette(self.palette_red)
 
     def keyReleaseEvent(self, event):
         key = event.key()
@@ -62,6 +66,12 @@ class MainWindow(QMainWindow):
         if key == QtCore.Qt.Key_D:
             self.rightLabel.setPalette(self.palette_black)
             self.con.send("d")
+        if key == QtCore.Qt.Key_Q:
+            self.cameraLeftLabel.setPalette(self.palette_black)
+            self.con.send("q")
+        if key == QtCore.Qt.Key_E:
+            self.cameraRightLabel.setPalette(self.palette_black)
+            self.con.send("e")
 
     def connection(self):
         self.con.connectt(self.ipLine.text(), int(self.portLine.text()))

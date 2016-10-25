@@ -90,7 +90,7 @@
     <property name="geometry">
      <rect>
       <x>810</x>
-      <y>140</y>
+      <y>180</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -175,6 +175,48 @@
     </property>
     <property name="text">
      <string>port</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="cameraLeftLabel">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>120</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>kamera lewo</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="cameraRightLabel">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>120</y>
+      <width>46</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>kamera prawo</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
