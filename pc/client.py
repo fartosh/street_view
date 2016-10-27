@@ -9,8 +9,10 @@ from PyQt4.QtGui import *
 
 
 class MainWindow(QMainWindow):
+    # IP = '169.254.164.187'
     # IP = '192.168.137.13'
-    IP = '192.168.137.87'
+    # IP = '192.168.137.87'
+    IP = '192.168.1.206'
     PORT = '51716'
 
     def __init__(self):
